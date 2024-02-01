@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+#logo {
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#xp {
+    color: #888;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#task-form {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#task-form input[type="text"] {
+    flex: 1;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#task-form button {
+    background-color: #5c7cfa;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#task-form button:hover {
+    background-color: #4a69ff;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#task-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+#task-list li:hover {
+    background-color: #f2f2f2; /* Lighter color for hover effect */
+}
+
+#task-list li .complete-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+    position: absolute;
+    right: 60px;
+}
+
+#task-list li .delete-btn {
+    background-color: #fff; /* Changed background color to white */
+    color: #007bff; /* Changed text color to blue */
+    border: 1px solid #000; /* Added black border */
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+}
+
+#task-list li .complete-btn:hover, #task-list li .delete-btn:hover {
+    background-color: #f2f2f2; /* Lighter color for hover effect */
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}

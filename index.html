@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="logo">Task List</div> <!-- Assuming there might be a logo or title -->
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter a task">
+        <button type="submit">Add Task</button>
+    </form>
+    <ul id="task-list">
+        <!-- Example Task -->
+        <li>
+            <span class="task-text">Example Task</span>
+            <button type="button" class="complete-btn">✔</button>
+            <button type="button" class="delete-btn">🗑️</button>
+        </li>
+        <!-- Tasks will be dynamically inserted here by your JavaScript -->
+    </ul>
+    <p id="xp">XP: 0</p>
+
+    <!-- Include SortableJS for drag-and-drop functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js"></script>
+    <!-- Include your app's JavaScript -->
+    <script src="app.js"></script>
+    <script>
+        // Initialize SortableJS on the task list
+        let taskList = document.getElementById('task-list');
+        new Sortable(taskList, {
+            animation: 150,
+            chosenClass: "sortable-chosen",
+            dragClass: "sortable-drag",
+        });
+    </script>
+</body>
+</html>
